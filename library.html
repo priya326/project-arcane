@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/library.css" />
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha384-F8fC2mFJ84fywT3kWxJSgKmOUd6IJsPLmCotcpDz9X+6msSR1bUykLjUwZ6UksM/"
+      crossorigin="anonymous"
+    />
+    <title>Arcane</title>
+
+    <!-- CSS -->
+    <style>
+      .modal {
+        display: none;
+        position: fixed; 
+        z-index: 1; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4); 
+      }
+      .modal #reviewTitle {
+        background: transparent;
+        outline: none;
+        border: none;
+        width: 30px;
+        border-bottom: 1px solid #e81cff;
+      }
+      .modal .modal-content {
+        background-color: #06070e;
+        margin: 15% auto; 
+        padding: 20px;
+        border: 1px solid #888;
+        width: 90%; 
+      }
+      .modal button {
+        height: 40px;
+
+        background: #e81cff;
+        border-radius: 5px;
+        color: white;
+      }
+
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      .modal .modal-content form {
+        width: 100%;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav-placeholder"></div>
+    <div class="container">
+      <p class="search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input
+          type="text"
+          name="search"
+          placeholder="Search Games"
+          class="search-lib"
+        />
+      </p>
+      <h3>Recently Played</h3>
+      <hr />
+      <div class="recent-games">
+        <div class="recent">
+          <a href="game.html"
+            ><img src="images/gta.jpg" alt="Card Image 4"
+          /></a>
+          <div class="card-content">
+            <a href=""><h3>Game Name</h3></a>
+            <p>Total hours played: 00hrs</p>
+            <a href="#" id="addReviewBtn">Add Review</a>
+          </div>
+        </div>
+        <div class="recent">
+          <a href="game.html"><img src="images/g1.PNG" alt="Card Image 4" /></a>
+          <div class="card-content">
+            <a href=""><h3>Game Name</h3></a>
+            <p>Total hours played: 00hrs</p>
+            <a href="#">Add Review</a>
+          </div>
+        </div>
+        <div class="recent">
+          <a href="game.html"><img src="images/g2.PNG" alt="Card Image 4" /></a>
+          <div class="card-content">
+            <a href=""><h3>Game Name</h3></a>
+            <p>Total hours played: 00hrs</p>
+            <a href="#">Add Review</a>
+          </div>
+        </div>
+        <div class="recent">
+          <a href="game.html"><img src="images/g3.PNG" alt="Card Image 4" /></a>
+          <div class="card-content">
+            <a href=""><h3>Game Name</h3></a>
+            <p>Total hours played: 00hrs</p>
+            <a href="#">Add Review</a>
+          </div>
+        </div>
+      </div>
+      <h3>All Games</h3>
+      <hr />
+      <div class="allgames">
+        <div class="game-owned">
+          <a href="game.html"><img src="images/g2.PNG" alt="Card Image 4" /></a>
+          <div class="card-content">
+            <a href=""><h3>Game Name</h3></a>
+            <p>Total hours played: 00hrs</p>
+            <a href="#">Add Review</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="addReviewModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Add Review</h2>
+        <form>
+          <label for="reviewTitle">Rating:</label>
+          <input type="text" id="reviewTitle" name="reviewTitle" />
+          /10<br /><br />
+          <label for="reviewText">Review:</label>
+          <textarea id="reviewText" name="reviewText"></textarea><br /><br />
+          <button id="submitReview">Submit</button>
+        </form>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#nav-placeholder").load("nav2.html");
+      });
+
+      var modal = document.getElementById("addReviewModal");
+
+      var addReviewBtn = document.getElementById("addReviewBtn");
+
+      var closeBtn = document.getElementsByClassName("close")[0];
+
+      addReviewBtn.onclick = function () {
+        modal.style.display = "block";
+      };
+
+      closeBtn.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>

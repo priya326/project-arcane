@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/signuplog.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha384-F8fC2mFJ84fywT3kWxJSgKmOUd6IJsPLmCotcpDz9X+6msSR1bUykLjUwZ6UksM/"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script>
+      function checkData() {
+        var email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        var dob = /^[0-9]{4}\-0?[1-9]|[10-12]\-0?[1-9]|[10-31]$/;
+        var phone = /^[0-9]{10}$/;
+        var pass = /^[A-Za-z]\w{7,14}$/;
+          if (document.getElementById("username1").value == "") {
+          alert( "Username field must not be empty");
+          return false;
+        } 
+        else if (!email.test(document.getElementById("email1").value)|| (document.getElementById("email1").value== "")) {
+          alert("Enter Valid Email Address");
+          return false;}
+          
+          else if (!pass.test(document.getElementById("password1").value)) {
+          alert(
+            "Password must be minimum 8 characters long with at least one lower case alphabet, one uppaer case alphabet, one digit and one special character!"
+          );
+          return false;
+        }
+        else if (document.getElementById("password1").value != document.getElementById("confirmPassword").value) {
+          alert("Password doesn't match"          );
+          return false;
+        }
+        else if (!phone.test(document.getElementById("phonenumber").value)) {
+          alert( "Enter valid phone number");
+          return false;
+        }  
+        else {
+          return true;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="nav-placeholder"></div>
+    <div class="wrapper">
+      <div class="tabs">
+        <button class="navTab active" data-toggle="login">Login</button>
+        <button class="navTab" data-toggle="register">Register</button>
+      </div>
+      <div class="contentWrapper">
+        <div class="content active" id="login">
+          <form action="#" method="POST" autocomplete="off">
+            <div class="formGroup">
+              <label for="email">Email address</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="name@example.com"
+                required
+              />
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                required
+              />
+              <small class="messageHelp"></small>
+              <div>
+                <input type="checkbox" id="checkBox" />
+                <span>Keep me Signed in</span>
+              </div>
+              <a href="#" id="passwordReset">Forgot password?</a>
+              <button class="btn" type="submit">Login</button>
+            </div>
+          </form>
+        </div>
+        <!-- register -->
+        <div class="content" id="register">
+          <form action="#" method="POST" autocomplete="off" onsubmit="return checkData()">
+            <div class="formGroup">
+              <label for="username">Username</label>
+              <input type="text" id="username1" placeholder="Username" />
+              <small id="messageuname" class="message"></small>
+              <label for="email">Email address</label>
+              <input
+                type="email"
+                id="email1"
+                placeholder="name@example.com"
+                title="Enter a valid email address"
+              />
+              <small id="messageemail" class="message"></small>
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password1"
+                placeholder="Password"
+                title="Must be at least 6 characters"
+              />
+              <small id="messagepass" class="message"></small>
+              <label for="confirmPassword">Confirm password</label>
+              <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Confirm Password"      
+              />
+              <small id="messageconfirm" class="message"></small>
+              <label for="phone">Phone Number</label>
+              <input
+                type="text"
+                id="phonenumber"
+                placeholder="Phone Number"      
+              />
+              <small id="messagephone" class="message"></small>
+              <button class="btn" type="submit">
+                Register
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(function () {
+        $("#nav-placeholder").load("nav2.html");
+      });
+      const tabs = document.querySelector(".tabs");
+      const tabButton = document.querySelectorAll(".navTab");
+      const content = document.querySelectorAll(".content");
+
+      tabs.addEventListener("click", (e) => {
+        const id = e.target.dataset.toggle;
+        if (id) {
+          tabButton.forEach((navTab) => {
+            navTab.classList.remove("active");
+          });
+          e.target.classList.add("active");
+        }
+        content.forEach((content) => {
+          content.classList.remove("active");
+        });
+
+        const element = document.getElementById(id);
+        element.classList.add("active");
+      });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

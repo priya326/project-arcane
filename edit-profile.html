@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Arcane</title>
+    <link rel="stylesheet" href="css/user-profile.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha384-F8fC2mFJ84fywT3kWxJSgKmOUd6IJsPLmCotcpDz9X+6msSR1bUykLjUwZ6UksM/"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+     <script>
+      function checkData() {
+        var email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        var dob = /^[0-9]{4}\-0?[1-9]|[10-12]\-0?[1-9]|[10-31]$/;
+        var phone = /^[0-9]{10}$/;
+        var pass = /^[A-Za-z]\w{7,14}$/;
+          if (document.getElementById("username").value == "") {
+          alert( "Username field must not be empty");
+          return false;
+        } 
+        else if (!email.test(document.getElementById("email").value)|| (document.getElementById("email1").value== "")) {
+          alert("Enter Valid Email Address");
+          return false;}
+          
+        else if (!phone.test(document.getElementById("phonenumber").value)) {
+          alert( "Enter valid phone number");
+          return false;
+        }  
+        else {
+          return true;
+        }
+      }
+    </script>
+    <style>
+      .edit-profile {
+        background-color: rgba(90, 89, 89, 0.2);
+        padding: 20px;
+        backdrop-filter: blur(14px);
+        text-align: center !important;
+        border-radius: 10px;
+      }
+      .edit-profile img {
+        height: 90px;
+        width: 90px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+      }
+      .form-fields{
+        display: flex;
+        align-items: center;
+        margin-left: 35%;
+        margin-right: 35%;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 350px;
+        margin-top: 20px;
+      }
+      .field{
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .field label{
+        text-align: left;
+        width: 100%;
+        text-transform: capitalize;
+        margin-bottom: 2px;
+        margin-top: 5px;
+        font-size: 1rem;
+        font-weight: bolder;
+      }
+      .field input{
+        width: 100%;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: white;
+      
+        border-bottom: 2px solid #E81CFF;
+        font-size:  1rem;
+        padding:7px;
+      }
+      .btns input{
+        border: none;
+        padding: 10px;
+        margin-right: 20px;
+        border-radius: 5px;
+        font-size: 1.1rem;
+      }
+      .btns .submit-btn{
+        background-color: #E81CFF;
+        color: white;
+      }
+      .main-content::-webkit-scrollbar{
+    display: none;
+}
+    </style>
+  </head>
+  <body>
+    <div id="nav-placeholder" ></div>
+    <div class="container">
+      <div class="side-nav">
+        <ul class="sidebar">
+          <li class="side-links">
+            <i class="fa-solid fa-user"></i>
+            <a href="user-profile.html">Profile</a>
+          </li>
+          <li class="side-links active">
+            <i class="fa-solid fa-pen"></i>
+            <a href="edit-profile.html">Edit Profile</a>
+          </li>
+          <li class="side-links">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <a href="wishlist.html">Wishlist</a>
+          </li>
+          <hr />
+          <li class="side-links">
+            <i class="fa-solid fa-user-group"></i>
+            <a href="friends.html">Friends</a>
+          </li>
+          <li class="side-links">
+            <i class="fa-solid fa-user-plus"></i>
+            <a href="add-friend.html">Add Friend</a>
+          </li>
+          <li class="side-links">
+            <i class="fa-solid fa-clock"></i>
+            <a href="pendingreq.html">Pending</a>
+          </li>
+          <hr />
+          <li class="side-links">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <a href="logout.html">Log Out</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="main-content px-5 py-4">
+        <form action="" class="edit-profile" onsubmit="return checkData()">
+          <h3>Edit Profile</h3>
+          <img src="images/profile.webp" alt="" /> <br />
+          <input type="file" name="user" id="userimg" value="upload image" />
+          <div class="form-fields">
+            <div class="field">
+              <label for="username">username</label> <br>
+              <input type="text" name="username" id="username" />
+            </div>
+            <div class="field">
+              <label for="Name">Name</label> <br>
+              <input type="text" name="name" id="name" />
+            </div>
+            <div class="field">
+              <label for="Email">email</label> <br>
+              <input type="text" name="email" id="email" />
+            </div>
+            <div class="field">
+              <label for="phonenumber">Phone Number</label> <br>
+              <input type="text" name="phonenumber" id="phonenumber" />
+            </div>
+            <div class="btns">
+              <input type="submit" value="Save Changes" class="submit-btn">
+              <input type="button" value="Cancel" class="cancel-btn">
+            </div>
+          </div>
+     
+        
+        </form>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#nav-placeholder").load("nav2.html");
+   
+      });
+    </script>
+  </body>
+</html>

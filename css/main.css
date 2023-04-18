@@ -1,0 +1,6 @@
+body{
+    background: linear-gradient(to right top, #06070e, #06070e, #06070e, #06070e, #06070e, #0d0e1b, #121326, #161731, #261d4a, #3e1f60, #5d1a72, #800080);
+    background-repeat: no-repeat;
+    background-size: cover;  
+    min-height: 100vh;
+  }

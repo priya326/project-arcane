@@ -1,0 +1,196 @@
+*{
+    color: white;
+}
+.container{
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 76% auto;
+}
+body {
+    font-size: 1rem !important;
+    min-height: 100vh;
+   
+  } 
+  .game-info{
+
+        padding: 30px;
+  }
+  .game-info img{
+    width: 100%;
+    height: 500px;
+  }
+  .game-info .nav-product{
+    display: flex;
+    padding-left: 0;
+    width: 25%;
+    justify-content: space-between;
+  }
+  .game-info .nav-product li{
+    list-style: none;
+  }
+  .game-info .nav-product li a{
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.5);
+    transition: all ease-in 0.1s;
+    
+  }
+  .game-info .nav-product li a:hover{
+    border-bottom: 3px solid rgba(119, 119, 119, 0.5)
+  }
+  .game-info .nav-product li a.active{
+    color: white;
+    border-bottom: 3px solid white;
+  }
+  .about{
+    font-size: 1.1rem;
+  }
+  .game-info .genres{
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    height: 100px;
+    padding: 20px;
+  }
+  .game-price{
+        
+        padding: 30px;
+        padding-top: 80%;
+        min-height: 90vh;
+       
+  }
+  .game-price > *{
+    margin-top: 10%;
+    font-size: 1.1rem;
+  }
+  .game-price a button{
+    height: 40px;
+    margin: 10px auto;
+    background: #E81CFF;
+    border-radius: 5px;
+    color: white;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+  }
+  .game-price .btn2 button{
+    background-color: transparent;
+    border: 2px solid white;
+  }
+  .game-price a button:hover{
+    background-color: white;
+    color: black;
+  }
+  .game-price .btn2 button:hover{
+    color: white;
+    background-color: rgba(150, 150, 150, 0.5);
+  }
+  .review-cards, .review-head{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.review-cards, .review-head a{
+  text-decoration: none;
+  color: white;
+}
+  .reviews .card {
+    box-sizing: border-box;
+    width: 300px;
+    height: 400px;
+    background: rgba(83, 82, 82, 0.28);
+    border: 1px solid rgb(146, 146, 146);
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+  }
+  .reviews .card hr{
+    color: rgb(255, 255, 255);
+    width: 80%;
+    height: 2px;
+  }
+  .reviews .card:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+  }
+  
+  .reviews .card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+  }
+  .specs-content{
+    border-radius: 5px;
+    width: 100%;
+    padding: 30px;
+    background-color: rgba(119, 119, 119, 0.3);
+  }
+  .specs table{
+    width: 100%;
+    word-wrap: normal;
+  }
+  .specs table th{
+    color: rgb(156, 156, 156);
+}
+.specs table tr th{
+
+  padding-top: 20px;
+}
+div.game-info > *{
+  margin-top: 4%;
+}
+.price-info .info{
+  display: flex;
+  padding: 5px 0;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(119, 119, 119, 0.5)
+}
+.price-info{
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+}
+.dlc{
+  padding: 20PX;
+  background-color: rgba(119, 119, 119, 0.3);
+  border-radius: 5px;
+}
+ .dlc-info{
+  display: grid;
+  column-gap: 40px;
+  width: 100% !important;
+  grid-template-columns: 50% auto;
+}
+.dlc .dlc-info img{
+  height: 200px;
+}
+.dlc-price{
+  display: grid;
+  padding: 10px;
+  grid-template-columns: 50% auto auto auto;
+}
+.dlc a button{
+  background: transparent;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+  border: 1px solid white;
+  outline: none;
+  text-transform: uppercase;
+}
+.dlc a:first-of-type button{
+  background-color: #E81CFF;
+  border: none;
+}
+.dlc a:first-of-type button:hover{
+  background-color: white;
+  color: black;
+}
+.dlc a button:hover{
+  background-color: rgba(119, 119, 119, 0.3);
+}

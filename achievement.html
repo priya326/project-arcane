@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/game.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Martian+Mono:wght@200&family=Source+Code+Pro:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    
+    <title>Arcane</title>
+    <style>
+      .tot-achievements {
+        display: grid;
+        padding: 20px;
+        grid-template-columns: 50% auto;
+        align-items: center;
+        text-align: center;
+        background-color: rgba(119, 119, 119, 0.3);
+      }
+      .tot-achievements img {
+        height: 200px;
+      }
+      .achieve-item{
+        width: 100%;
+        margin-top: 20px;
+        padding:  0 20px;
+        background-color: transparent;
+        border-bottom: 1px solid rgba(119, 119, 119, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="nav-placeholder"></div>
+    <div class="container">
+      <div class="game-info">
+        <h2>Game Name</h2>
+        <ul class="nav-product">
+          <li class="nav-item">
+            <a class="nav-link" href="game.html">Overview</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="dlc.html">DLC</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link active" href="achievement.html">Achievements</a>
+          </li>
+        </ul>
+        <div class="tot-achievements">
+          <img src="images/rdr3.jpg" alt="" />
+          <div>
+            TOTAL ACHIEVEMENTS
+            <h2>0 Achievements</h2>
+          </div>
+        </div>
+        <h3>Achievements</h3>
+        <div class="achieve-list">
+            <div class="achieve-item">
+                <p>name</p>
+                <p>rarity</p>
+            </div>
+            <div class="achieve-item">
+                <p>name</p>
+                <p>rarity</p>
+            </div>
+            <div class="achieve-item">
+                <p>name</p>
+                <p>rarity</p>
+            </div>
+        </div>
+      </div>
+     
+      <div class="game-price">
+        <span></span>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/53c75f9f42.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#nav-placeholder").load("nav2.html");
+      });
+    </script>
+  </body>
+</html>

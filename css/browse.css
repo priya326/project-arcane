@@ -1,0 +1,75 @@
+.active{
+    
+    background-color: rgba(255, 255, 255, 0.3);
+    
+  }
+.container{
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 20% auto;
+    overflow: hidden;
+}
+body {
+    font-size: 1rem !important;
+    min-height: calc(100vh - 60px);
+   
+  } 
+ *{
+    color: white;
+ }
+  .sidebar{
+    padding: 50px 10px 0 0 ;
+    border-right:  1px solid white;
+    text-align: center;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+    min-height: calc(100vh - 60px);
+    transition: all ease-in 0.2s;
+  }
+  .sidebar h3{
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+  }
+ 
+  .sidebar ul li{
+    width: 100%;
+    cursor: pointer;
+    list-style: none;
+    margin: 40px 0;
+    padding: 15px 30px;
+    border-radius: 5px;
+  }
+  .sidebar ul li:hover{
+    border: 1px solid rgb(255, 255, 255);
+  }
+  .sidebar li a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    color: white;
+  }
+  #games-list{
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+    display: grid !important;
+    grid-template-columns: auto auto auto auto;
+    padding: 30px 10px 10px 30px;
+    gap: 20px;
+
+  }
+  #games-list .game{
+    background-color: rgba(113, 112, 112, 0.3);
+    text-align: center;
+    padding: 10px;
+  }
+  #games-list .game .img{
+    height: 300px;
+    width: 200px;
+  }
+  #games-list::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+.sidebar::-webkit-scrollbar{
+    display: none;
+}

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha384-F8fC2mFJ84fywT3kWxJSgKmOUd6IJsPLmCotcpDz9X+6msSR1bUykLjUwZ6UksM/"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Arcane</title>
+  </head>
+  <body>
+    <div
+      id="carouselExampleAutoplaying"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div id="nav-placeholder"></div>
+      <div class="carousel-inner">
+        <div id="nav-placeholder"></div>
+        <div class="carousel-item active">
+          <img src="images/cyber1.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption">
+            <img src="images/1022934.jpg" alt="" class="imag-slide" />
+            <div>
+              <h1 class="animate__animated animate__fadeInRight">Cyberpunk</h1>
+              <p>
+                Some representative placeholder content for the second slide.
+              </p>
+              <div>
+                <button id="button-slide-buy">Buy Now</button> &nbsp;
+                &nbsp;<button id="button-slide-wishlist">
+                  Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/rdr6.jpg" class="d-block w-100" alt="..." />
+          <div class="carousel-caption">
+            <img src="images/rdrimg.jpg" alt="" class="imag-slide" />
+            <div>
+              <h1 class="animate__animated animate__fadeInRight">
+                Red Dead Redemption
+              </h1>
+              <p>
+                Some representative placeholder content for the second slide.
+              </p>
+              <div>
+                <button id="button-slide-buy">Buy Now</button> &nbsp;
+                &nbsp;<button id="button-slide-wishlist">
+                  Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/stray_sc5-1.webp" class="d-block w-100" alt="..." />
+          <div class="carousel-caption">
+            <img src="images/strayimg.jpg" alt="" class="imag-slide" />
+            <div>
+              <h1 class="animate__animated animate__fadeInRight">Stray</h1>
+              <p>
+                Some representative placeholder content for the second slide.
+              </p>
+              <div>
+                <button id="button-slide-buy">Buy Now</button> &nbsp;
+                &nbsp;<button id="button-slide-wishlist">
+                  Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <section class="card-section">
+      <h2 class="section-title">Games on Sale</h2>
+      <div class="card-row">
+        <div class="card">
+          <a href="game.html"><img src="images/g1.PNG" alt="Card Image 1" /></a>
+          <div class="card-content">
+            <h3>Game 1</h3>
+            <p>Game description goes here.</p>
+            <a href="#">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <a href=""><img src="images/g2.PNG" alt="Card Image 2" /></a>
+          <div class="card-content">
+            <h3>Game 2</h3>
+            <p>Game description goes here.</p>
+            <a href="#">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <a href=""><img src="images/g3.PNG" alt="Card Image 3" /></a>
+          <div class="card-content">
+            <h3>Game 3</h3>
+            <p>Game description goes here.</p>
+            <a href="#">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <a href=""><img src="images/dl2.PNG" alt="Card Image 4" /></a>
+          <div class="card-content">
+            <h3>Game 4</h3>
+            <p>Game description goes here.</p>
+            <a href="#">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="card-section">
+      <h2 class="section-title">Games on Sale</h2>
+      <div class="card-row">
+        <div class="card">
+          <a href=""> <img src="images/g1.PNG" alt="Card Image 1" /></a>
+          <div class="card-content">
+            <h3>Game 1</h3>
+            <p>Game description goes here.</p>
+            <a href="#">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <a href=""><img src="images/g2.PNG" alt="Card Image 2" /></a>
+          <div class="card-content">
+            <h3>Game 2</h3>
+            <p>Game description goes here.</p>
+            <a href="#">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <a href=""><img src="images/g3.PNG" alt="Card Image 3" /></a>
+          <div class="card-content">
+            <h3>Game 3</h3>
+            <p>Game description goes here.</p>
+            <a href="#">Buy Now</a>
+          </div>
+        </div>
+        <div class="card">
+          <a href=""><img src="images/dl2.PNG" alt="Card Image 4" /></a>
+          <div class="card-content">
+            <h3>Game 4</h3>
+            <p>Game description goes here.</p>
+            <a href="#">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-3">
+            <h4>About Us</h4>
+            <p>
+              We are a gaming community that provides the latest news, reviews,
+              and tips on all things gaming.
+            </p>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <h4>Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Games</a></li>
+              <li><a href="#">Reviews</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <h4>Follow Us</h4>
+            <ul class="social-icons">
+              <li>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <h4>Contact Us</h4>
+            <ul>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> 123 Main Street, Anytown
+                USA
+              </li>
+              <li><i class="fas fa-envelope"></i> info@gamingwebsite.com</li>
+              <li><i class="fas fa-phone"></i> 555-123-4567</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div id="myOverlay" style="display: none">
+      <div id="myPopup">
+        <div class="img-popup">
+          <img src="images/Cyberpunk_2077_box_art.jpg" alt="" />
+        </div>
+        <div class="purchase-details">
+          <div>
+            <h3>Game Name</h3>
+            <br />
+            <table>
+              <tr>
+                <td>Total</td>
+                <td>0000</td>
+              </tr>
+              <tr>
+                <td>Sale discount</td>
+                <td>00</td>
+              </tr>
+              <tr>
+                <td>Grand Total</td>
+                <td>00</td>
+              </tr>
+            </table>
+            <br><br>
+            <input type="checkbox" name="check" id="check" /> Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Quas ex doloremque, et eos
+            ipsum aperiam unde sed accusantium voluptate aut?
+          </div>
+          <div class="btns">
+            <button id="closeButton">X </button>
+            <button id="purchase-btn">purchase</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/53c75f9f42.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#nav-placeholder").load("nav.html");
+      });
+      var button = document.getElementById("button-slide-buy");
+      var overlay = document.getElementById("myOverlay");
+      var closeButton = document.getElementById("closeButton");
+
+      button.onclick = function () {
+        overlay.style.display = "block";
+      };
+
+      closeButton.onclick = function () {
+        overlay.style.display = "none";
+      };
+    </script>
+  </body>
+</html>
